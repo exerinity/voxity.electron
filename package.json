@@ -1,0 +1,44 @@
+{
+  "name": "voxity",
+  "productName": "Voxity",
+  "version": "1.0",
+  "description": "A meaningless Electron wrap of Voxity",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/exerinity/voxity.electron"
+  },
+  "homepage": "https://github.com/exerinity/voxity.electron",
+  "main": "main.js",
+  "author": "Exerinity",
+  "license": "MIT",
+  "scripts": {
+    "dev": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -w",
+    "build": "tsc -p ."
+  },
+  "devDependencies": {
+    "electron": "^28.2.3",
+    "electron-builder": "^24.13.3",
+    "windows-shortcuts": "^1.0.0"
+  },
+  "build": {
+    "appId": "com.exerinity.voxity",
+    "productName": "Voxity",
+    "files": [
+      "main.js",
+      "build/**/*",
+      "package.json"
+    ],
+    "directories": {
+      "buildResources": "build"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "APP.ico"
+    }
+  }
+}
