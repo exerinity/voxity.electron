@@ -1,7 +1,7 @@
 {
   "name": "voxity",
   "productName": "Voxity",
-  "version": "1.0",
+  "version": "1.0.0",
   "description": "A meaningless Electron wrap of Voxity",
   "repository": {
     "type": "git",
@@ -9,13 +9,14 @@
   },
   "homepage": "https://github.com/exerinity/voxity.electron",
   "main": "main.js",
-  "author": "Exerinity",
-  "license": "MIT",
+  "author": "exerinity",
+  "license": "WTFPL",
   "scripts": {
     "dev": "electron .",
-    "pack": "electron-builder --dir",
-    "dist": "electron-builder -w",
-    "build": "tsc -p ."
+    "dist": "electron-builder",
+    "dist:win": "electron-builder -w",
+    "dist:mac": "electron-builder -m",
+    "dist:linux": "electron-builder -l"
   },
   "devDependencies": {
     "electron": "^28.2.3",
