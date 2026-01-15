@@ -1,7 +1,7 @@
 {
   "name": "voxity",
   "productName": "Voxity",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A meaningless Electron wrap of Voxity",
   "repository": {
     "type": "git",
