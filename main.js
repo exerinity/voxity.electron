@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 
 const APP_ID = "com.exerinity.voxity"; // this should be "com.exerinity.audion" (matching the webmanifest), but this electron build is brand-new, so...
-const START_URL = "https://voxity.exerinity.com";
+const START_URL = "https://voxity.dev";
 const ICON_PATH = path.join(__dirname, "build", "APP.ico");
 
 function ensureStartMenuShortcut() {
