@@ -1,31 +1,30 @@
 {
   "name": "voxity",
   "productName": "Voxity",
-  "version": "1.1.0",
-  "description": "A meaningless Electron wrap of Voxity",
+  "version": "1.2.0",
+  "description": "A minimal Electron shell for Voxity",
+  "main": "main.js",
+  "author": "exerinity",
+  "license": "WTFPL",
   "repository": {
     "type": "git",
     "url": "https://github.com/exerinity/voxity.electron"
   },
-  "homepage": "https://github.com/exerinity/voxity.electron",
-  "main": "main.js",
-  "author": "exerinity",
-  "license": "WTFPL",
+  "homepage": "https://voxity.dev",
   "scripts": {
     "dev": "electron .",
     "dist": "electron-builder",
     "dist:win": "electron-builder -w",
-    "dist:mac": "electron-builder -m",
     "dist:linux": "electron-builder -l"
   },
   "devDependencies": {
     "electron": "^28.2.3",
-    "electron-builder": "^24.13.3",
-    "windows-shortcuts": "^1.0.0"
+    "electron-builder": "^24.13.3"
   },
   "build": {
     "appId": "com.exerinity.voxity",
     "productName": "Voxity",
+    "asar": true,
     "files": [
       "main.js",
       "build/**/*",
@@ -34,12 +33,23 @@
     "directories": {
       "buildResources": "build"
     },
+
     "win": {
-      "target": [
-        "nsis",
-        "portable"
-      ],
+      "target": ["nsis", "portable"],
       "icon": "APP.ico"
+    },
+
+    "linux": {
+      "target": ["AppImage", "deb", "rpm"],
+      "category": "Audio",
+      "icon": "voxity.png",
+      "desktop": {
+        "StartupWMClass": "voxity"
+      }
+    },
+
+    "mac": {
+      "target": []
     }
   }
 }
