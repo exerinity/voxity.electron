@@ -4,7 +4,7 @@
   "version": "1.2.0",
   "description": "A minimal Electron shell for Voxity",
   "main": "main.js",
-  "author": "exerinity",
+  "author": "exerinity <me@exerinity.com>",
   "license": "WTFPL",
   "repository": {
     "type": "git",
@@ -33,21 +33,25 @@
     "directories": {
       "buildResources": "build"
     },
-
     "win": {
-      "target": ["nsis", "portable"],
+      "target": [
+        "nsis",
+        "portable"
+      ],
       "icon": "APP.ico"
     },
-
     "linux": {
-      "target": ["AppImage", "deb", "rpm"],
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ],
       "category": "Audio",
       "icon": "voxity.png",
       "desktop": {
         "StartupWMClass": "voxity"
       }
     },
-
     "mac": {
       "target": []
     }
