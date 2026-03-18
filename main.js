@@ -3,8 +3,7 @@ const path = require("path");
 
 const APP_NAME = "Voxity";
 const START_URL = "https://voxity.dev?electron=true";
-const ICON_PATH = path.join(__dirname, "voxity.png");
-
+const ICON_PATH = path.join(__dirname, process.platform === "win32" ? "APP.ico" : "voxity.png");
 app.setName(APP_NAME);
 app.setAppUserModelId("com.exerinity.voxity");
 
