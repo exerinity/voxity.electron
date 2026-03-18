@@ -27,7 +27,8 @@
     "asar": true,
     "files": [
       "main.js",
-      "build/**/*",
+      "APP.ico",
+      "voxity.png",
       "package.json"
     ],
     "win": {
