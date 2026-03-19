@@ -27,6 +27,16 @@ Only a .exe, .deb and .AppImage exist, I am not catering for everyone. But, as t
 #
 The point of creating this was for it to get picked up by Music Presence for Discord, as it turns out, browsers cannot be detected because they're... browsers. So, I made this super minimal shell for Voxity, identified itself via **com.exerinity.voxity** and requested whitelisting, and it worked! Only on Windows, for now.
 
+# Install
+### View binaries
+https://bin.i.exerinity.com/voxity/index.html
+### Arch Linux (via AUR)
+```bash
+yay -S voxity-bin
+```
+### Anything else
+Consult the [**releases**](https://github.com/exerinity/voxity.electron/releases) page! If your operating system isn't there, you can either [**just use the web version**](https://voxity.dev) or [**build it yourself**](#build-yourself).
+
 # License
 This app (and Voxity itself) is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
