@@ -4,8 +4,13 @@ const path = require("path");
 const APP_NAME = "Voxity";
 const START_URL = "https://voxity.dev?electron=true";
 const ICON_PATH = path.join(__dirname, process.platform === "win32" ? "APP.ico" : "voxity.png");
+
 app.setName(APP_NAME);
 app.setAppUserModelId("com.exerinity.voxity");
+
+if (process.platform === "linux") {
+  app.setDesktopName("com.exerinity.voxity.desktop");
+}
 
 let mainWindow;
 
@@ -24,14 +29,12 @@ function createWindow() {
   });
 
   mainWindow.webContents.on("will-prevent-unload", e => e.preventDefault());
-
   mainWindow.webContents.setWindowOpenHandler(({ url }) => {
     shell.openExternal(url);
     return { action: "deny" };
   });
 
   mainWindow.loadURL(START_URL);
-
   createMenu(mainWindow);
 }
 
@@ -142,7 +145,6 @@ function createMenu(win) {
 
 app.whenReady().then(() => {
   createWindow();
-
   app.on("activate", () => {
     if (BrowserWindow.getAllWindows().length === 0) {
       createWindow();
