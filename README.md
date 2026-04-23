@@ -1,6 +1,9 @@
 # Voxity: Electron
 This is a basic barebones Electron wrap of [Voxity](https://github.com/exerinity/voxity), a local music player written in vanilla JS. This is a lightweight, straightforward, and intuitive build avoiding the typical clutter and bloat of most Electron apps.
 
+# Archived
+This app will no longer be worked on: I am planning to fork Voxity and make a new Electron app with it that actually scours your drive and has queue vs library and whatnot
+
 # Why?
 ## - It can get picked up by [Music Presence for Discord](https://musicpresence.app) and show what you're listening to on Discord
 
