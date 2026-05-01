@@ -1,6 +1,6 @@
 # Maintainer: exerinity <me@exerinity.com>
 pkgname=voxity-bin
-pkgver=2
+pkgver=2.0.0
 pkgrel=1
 pkgdesc="An opinionated, intuitive, lightweight local music player"
 arch=('x86_64')
