@@ -1,7 +1,7 @@
 {
   "name": "voxity",
   "productName": "Voxity",
-  "version": "2",
+  "version": "2.0.0",
   "description": "An opinionated, intuitive, lightweight local music player written in JavaScript",
   "main": "main.js",
   "author": "exerinity <me@exerinity.com>",
