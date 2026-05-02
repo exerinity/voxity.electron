@@ -4,8 +4,10 @@ This is a basic barebones Electron wrap of [Voxity](https://github.com/exerinity
 # Why?
 ## - It can get picked up by [Music Presence for Discord](https://musicpresence.app) and show what you're listening to on Discord
 
+(on Windows and Linux)
+
 ![](https://i.exerinity.com/Discord_20260222_195847.png)
-## - It has an application menu, giving you faster (debatably) access to some things
+## - It has an application menu, giving you faster access to some things
 ![](https://i.exerinity.com/Voxity_20260222_200013.gif)
 ## - This build enables better now playing display (like Media Session) on both Windows and Linux\*
 ![](https://i.exerinity.com/Voxity_20260222_200115.png)
@@ -14,7 +16,11 @@ This is a basic barebones Electron wrap of [Voxity](https://github.com/exerinity
 ## - It can give you faster access to Voxity, for example by pinning it to your start menu, dock, or task manager
 ![](https://i.exerinity.com/explorer_20260222_200343.png)
 
-## And most importantly:
+## On Linux, it properly integrates with MPRIS and obeys signals, like shuffle, loop, play/pause/skip from things like the KDE media player widget
+
+![](https://i.exerinity.com/Screenshot_20260502_103620.png)
+
+### And most importantly:
 ## - It is not a typical RAM-hungry Electron behemoth
 ![](https://i.exerinity.com/Taskmgr_20260222_200440.png)
 
@@ -25,17 +31,20 @@ Also, it doesn't take forever to start! On a fast system, it's next to instant.
 Only a .exe, .deb and .AppImage exist, I am not catering for everyone. But, as this is *a shell*, you could probably easily make your own build. 
 
 #
-The point of creating this was for it to get picked up by Music Presence for Discord, as it turns out, browsers cannot be detected because they're... browsers. So, I made this super minimal shell for Voxity, identified itself via **com.exerinity.voxity** and requested whitelisting, and it worked! Only on Windows, for now.
+The point of creating this was for it to get picked up by Music Presence for Discord, as it turns out, browsers cannot be detected because they're... browsers. So, I made this super minimal shell for Voxity, identified itself via **com.exerinity.voxity** / **voxity** / **Voxity.exe** [and requested whitelisting, and it worked!](https://github.com/music-presence/media-players/blob/master/src/players/miscellaneous/voxity.yaml)
+
+## Is it required?
+No! It is not required at all, but if you want the amenities listed above, you might want to download it. If you just want a more app-like feel, you can just install Voxity as a regular PWA by clicking **Install** if it shows or [referring to this guide](https://voxity.dev/i/how_pwa)
 
 # Install
-### View binaries
-https://bin.i.exerinity.com/voxity/index.html
 ### Arch Linux (via AUR)
 ```bash
 yay -S voxity-bin
 ```
-### Anything else
-Consult the [**releases**](https://github.com/exerinity/voxity.electron/releases) page! If your operating system isn't there, you can either [**just use the web version**](https://voxity.dev) or [**build it yourself**](#build-yourself).
+### Other OSes 
+[Check releases](https://github.com/exerinity/voxity.electron/releases)
+### Anything else not there
+If your operating system isn't there, you can either [**just use the web version**](https://voxity.dev) or [**build it yourself**](#build-yourself)!
 
 # License
 This app (and Voxity itself) is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
